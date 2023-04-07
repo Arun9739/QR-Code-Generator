@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR code generator</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/qr-icon-img.ico" />
+  </head>
+
+  <body>
+    <div class="grid">
+      <h1>QR Code generator</h1>
+
+      <select id="size">
+        <option value="100">100x100</option>
+        <option value="150">150x150</option>
+        <option value="200">200x200</option>
+        <option value="250" selected>250x250</option>
+        <option value="300">300x300</option>
+      </select>
+
+      <br /><br />
+
+      <textarea placeholder="Enter your text" id="qrtext"></textarea>
+
+      <br /><br />
+
+      <input type="submit" value="Generate" onclick="openPopup()" />
+
+      <br /><br />
+
+      <div class="popup" id="myPopup">
+        <div class="popup-box">
+          <button id="closePopup" onclick="closePopup()">&times;</button>
+          <img src="" alt="Popup Image" id="img" />
+
+          <button class="btn" onclick="downloadQR()">
+            <i class="fa fa-download"></i> Download QR
+          </button>
+        </div>
+      </div>
+      <p>Designed & Developed by Arun G Nayak</p>
+    </div>
+  </body>
+</html>
